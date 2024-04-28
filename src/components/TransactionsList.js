@@ -31,7 +31,8 @@ function TransactionsList({transactions, searchText}) {
             transaction.description.toLowerCase().indexOf(
               searchText.toLowerCase()
             ) === -1
-          ){return}
+          ) {return ""}
+            
           else {
           return (<Transaction 
                   key = {transaction.id} 
