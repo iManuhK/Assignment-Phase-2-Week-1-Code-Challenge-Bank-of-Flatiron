@@ -1,12 +1,14 @@
 import React from "react";
 
-function Search() {
+//props received from rendering component
+function Search({onFilterTextChange, searchText}) {
   return (
     <div className="ui large fluid icon input">
       <input
         type="text"
         placeholder="Search your Recent Transactions"
-        onChange={() => console.log("Searching...")}
+        value = {searchText}
+        onChange={(event) => onFilterTextChange(event.target.value)} 
       />
       <i className="circular search link icon"></i>
     </div>
